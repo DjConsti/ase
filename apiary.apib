@@ -25,6 +25,55 @@ HOST: http://tuase16.apiblueprint.org/
                  "artistName": ""
           }
 
+## Feedback Send Collection [/feedback/send/]
+
+### Feedback Send [POST]
+
++ Request (application/json)
+
+         {
+                "sessionId": "sha256"
+         }
+
++ Response 200 (application/json)
+
+         {
+            "success": "1"
+         }
+          
+## Feedback Overview Collection [/feedback/overview/]
+
+### Feedback Overview [POST]
+
++ Request (application/json)
+
+         {
+                "sessionId": "sha256"
+         }
+
++ Response 200 (application/json)
+
+         {
+            "feedback": [
+                  {
+                    "feedbackText": "This is awesome!",
+                    "createdIn": "rebeatOverview",
+                    "feedbackScore": "5"
+                  },
+                  {
+                    "feedbackText": "I like it!",
+                    "createdIn": "artistOverview",
+                    "feedbackScore": "4"
+                  },
+                  {
+                    "feedbackText": "Yes haha!",
+                    "createdIn": "rebeatOverview",
+                    "feedbackScore": "5"
+                  }
+                ],
+                "totalPages": "1"
+         }
+
 ## Artist Search Collection [/artist/search]
 
 ### Search for an Artist [POST]
